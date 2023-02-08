@@ -1,0 +1,20 @@
+.mainCard{
+    display: flex;
+    margin-top: 10px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px #aaaaaa;
+    width: 50%;
+    min-height: 150px;
+}
+
+.cardHeading{
+    margin: 0;
+}
+.bootomBtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,10 @@
+.btnMain{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.btnMain button{
+    box-shadow: 2px 2px 3px  #aaaaaa;
+}

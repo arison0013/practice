@@ -1,0 +1,14 @@
+.paraMain{
+    border: 1px solid black;
+    margin:10px 25px;
+   
+}
+
+.paraBody{
+    width: 30%;
+    min-height: 150px;
+    margin: 10px auto;
+    border: 1px solid black;
+    padding: 12px;
+    box-shadow: 5px 5px 5px  #aaaaaa;
+}
