@@ -1,14 +1,14 @@
 import React, { useState } from 'react'
 
-const initialHearts = [null, null, null, null, null, null, null, null, null, null,];
 const initialStars = [null, null, null, null, null];
+const initialHearts = [null, null, null, null, null, null, null, null, null, null,];
 
 function Heart() {
   const [hearts, setHearts] = useState(initialHearts);
   const [starts, setStarts] = useState(initialStars);
 
   const handleClick = (type, index) => {
-    if (type == "star") {
+    if (type === "star") {
       if (starts[index - 1] !== null && (starts[index] === null || starts[index] === undefined)) {
         setHearts(initialHearts);
         setStarts(initialStars);
@@ -59,18 +59,21 @@ function Heart() {
 
   return (
     <div style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", border: "1px solid", height: "100vh", }} >
-      <div>
+      <div style={{marginBottom:"16px"}}>
         {hearts.map((item, index) => {
+          console.log("haert",item)
           return (
             <button key={index} onClick={() => handleClick("heart", index + 1)}>
-              <img src={item ? "./images/heartFilled.png" : "./images/heart.png"} style={{ width: 50, height: 50 }} />
+              <img src={item ? "./images/heartFilled.png" : "./images/heart.png"} style={{ width: 50, height: 50 }} alt={""}/>
             </button>);
         })}
       </div>
       <div>
         {starts.map((item, index) => {
-          return (<button key={index} onClick={() => handleClick("star", index + 1)}> <img src={item ? "./images/starFilled.png" : "./images/star.png"} 
-          style={{ width: 50, height: 50 }} /> </button>);
+          console.log("star",item)
+          return (
+            <button key={index} onClick={() => handleClick("star", index + 1)}>
+              <img src={item ? "./images/starFilled.png" : "./images/star.png"} style={{ width: 50, height: 50 }} alt={""}/> </button>);
         })}
       </div>
     </div>
