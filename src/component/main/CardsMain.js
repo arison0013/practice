@@ -29,8 +29,8 @@ function CardsMain() {
   const [cardDetails, setcardDetails] = useState(list);
 
   const deleteDiv = (id) => {
-    const newitem = cardDetails.filter((r) => r.id !== id)
-    setcardDetails(newitem)
+    const newitems = cardDetails.filter((r) => r.id !== id) // array naming
+    setcardDetails(newitems)
   }
 
   const deleteAllDiv = () => {
@@ -38,7 +38,7 @@ function CardsMain() {
   }
   return (
     <div className='outerMain'>
-    {cardDetails.map((res, index) => (<Card data={list} heading={res.heading} color={res.color} id={res.id} deleteDiv={deleteDiv} key={index} />))}
+    {cardDetails.map((res, index) => (<Card  heading={res.heading} color={res.color} id={res.id} deleteDiv={deleteDiv} key={index} />))}
     {cardDetails.length !== 0 && <Delete onClick={deleteAllDiv} className="mt-3 mb-3" />}
   </div>
   )

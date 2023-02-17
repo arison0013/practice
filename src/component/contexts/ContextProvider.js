@@ -12,11 +12,9 @@ function ContextProvider(props) {
 
     }
     return (
-        <div>
             <commonContext.Provider value={{ backgroundcolor, changeBackground }}>
                 {props.children}
             </commonContext.Provider>
-        </div>
     )
 }
 
